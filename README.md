@@ -8,8 +8,6 @@ Sistema para identificação automática de lacunas de pesquisa a partir de arti
 - Busca vetorial (FAISS)
 - Avaliação com LLM
 
----
-
 ## Dataset
 
 Utiliza o dataset do ArXiv:
@@ -21,8 +19,6 @@ Utiliza o dataset do ArXiv:
 Coloque o arquivo em:
 
 - data/arxiv.json
-
----
 
 ## ⚙️ Instalação
 
@@ -43,8 +39,6 @@ pip install -r requirements.txt
 
 O sistema é dividido em duas etapas:
 
----
-
 ## 1. Build do índice (offline)
 
 Processa os artigos e constrói:
@@ -60,6 +54,8 @@ python build_index.py
 ```
 
 ## Saídas geradas:
+
+```bash
 artifacts/
 ├── faiss.index
 ├── embeddings.npy
@@ -67,6 +63,7 @@ artifacts/
 ├── gaps.json
 ├── config.json
 └── research_graph.gexf
+```
 
 ---
 
