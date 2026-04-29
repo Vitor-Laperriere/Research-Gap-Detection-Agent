@@ -1,0 +1,11 @@
+numpy
+pandas
+faiss-cpu
+networkx
+scikit-learn
+tqdm
+bertopic
+sentence-transformers
+torch
+transformers
+openai
