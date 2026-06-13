@@ -9,3 +9,15 @@ sentence-transformers
 torch
 transformers
 openai
+
+requests
+numpy
+networkx
+sentence-transformers
+spacy
+scispacy
+hdbscan
+scikit-learn
+torch
+python-louvain
+FlagEmbedding

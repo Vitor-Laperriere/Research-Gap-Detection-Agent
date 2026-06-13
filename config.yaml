@@ -9,6 +9,10 @@ document_converter:
   provider_name: pymupdf
   use_arxiv_html: true
 
+reranker:
+  provider_name: jina
+  fallback: langsearch
+
 sources:
   arxiv_enabled: true
   openalex_enabled: true
