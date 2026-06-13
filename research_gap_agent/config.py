@@ -34,11 +34,16 @@ class DocumentConverterConfig(BaseModel):
     provider_name: Literal['pymupdf', 'marker', 'jina'] = 'pymupdf'
     use_arxiv_html: bool = True
 
+class RerankerConfig(BaseModel):
+    provider_name: Literal['jina', 'langsearch', 'cross-encoder', 'bge'] = 'jina'
+    fallback: Optional[Literal['jina', 'langsearch', 'cross-encoder', 'bge']] = 'langsearch'
+
 class YamlConfig(BaseModel):
     pipeline: PipelineConfig = Field(default_factory=PipelineConfig)
     sources: SourcesConfig = Field(default_factory=SourcesConfig)
     llm: dict[str, LLMRoleConfig] = Field(default_factory=dict)
     document_converter: DocumentConverterConfig = Field(default_factory=DocumentConverterConfig)
+    reranker: RerankerConfig = Field(default_factory=RerankerConfig)
 
     def llm_for(self, role: str) -> LLMRoleConfig:
         if role in self.llm:
