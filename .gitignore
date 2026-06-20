@@ -11,3 +11,7 @@ venv/
 artifacts/
 logs/
 cache/
+.DS_Store
+report.json
+report.md
+run.log
