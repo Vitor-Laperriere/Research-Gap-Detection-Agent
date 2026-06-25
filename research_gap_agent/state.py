@@ -32,6 +32,7 @@ class GraphState(BaseModel):
     initial_topic: str
 
     queries: list[SearchQuery] = Field(default_factory=list)
+    primary_query: str = ""
     raw_papers: list[Paper] = Field(default_factory=list)
     ranked_papers: list[Paper] = Field(default_factory=list)
     extracted: list[ExtractedInsights] = Field(default_factory=list)
